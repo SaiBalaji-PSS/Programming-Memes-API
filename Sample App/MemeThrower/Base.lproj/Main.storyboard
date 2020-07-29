@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-VS-4y8">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Meme Generator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MemeVC" customModule="MemeThrower" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="3Av-em-8r8">
+                                <rect key="frame" x="57" y="74" width="261" height="446"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ii5-LX-1Qh">
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="318"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="261" id="KSi-Gj-7Jl"/>
+                                            <constraint firstAttribute="height" constant="318" id="YE8-Dl-T5z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pp-pI-Y42" customClass="Custombtn" customModule="MemeThrower" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="398" width="261" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="261" id="8Rh-H0-w7M"/>
+                                            <constraint firstAttribute="height" constant="48" id="YkO-3Q-Z4h"/>
+                                        </constraints>
+                                        <state key="normal" title="Generate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="generatebtnclicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Nu-01-Zdt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yM1-Bc-YRW">
+                                <rect key="frame" x="57" y="223" width="261" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0zR-R6-yax"/>
+                                    <constraint firstAttribute="width" constant="261" id="hnp-N8-oxa"/>
+                                </constraints>
+                                <color key="color" red="0.65002925199999995" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Av-em-8r8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LJO-bQ-kvr"/>
+                            <constraint firstItem="3Av-em-8r8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ZP8-Sa-Xie"/>
+                            <constraint firstItem="yM1-Bc-YRW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="179" id="dFi-1x-LWo"/>
+                            <constraint firstItem="yM1-Bc-YRW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kbl-hv-m4e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Random Meme Generator" id="SYZ-bj-mAA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="B0Q-47-ilP">
+                            <connections>
+                                <action selector="share:" destination="BYZ-38-t0r" id="OBh-aH-vey"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="generatebtn" destination="2Pp-pI-Y42" id="gQb-Xl-Nyr"/>
+                        <outlet property="memeimageview" destination="ii5-LX-1Qh" id="3kQ-4W-zVn"/>
+                        <outlet property="progressindicator" destination="yM1-Bc-YRW" id="OMV-am-b8S"/>
+                        <outlet property="sbtn" destination="B0Q-47-ilP" id="Q6H-p8-cfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yKc-3l-icC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6wg-VS-4y8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qoP-z1-4hD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8SG-5u-kbg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gp4-uI-Y8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="2Pp-pI-Y42">
+            <size key="intrinsicContentSize" width="64" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
