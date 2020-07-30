@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="16097.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="16012"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MemeGenerator_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView height="177" alignment="left" animationDuration="1" id="svO-61-74T">
+                            <color key="tintColor" red="0.70679030880000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                    </items>
+                    <connections>
+                        <outlet property="memeimageView" destination="svO-61-74T" id="5fq-Vv-L2C"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="117.52173913043478" y="72.857142857142861"/>
+        </scene>
+    </scenes>
+</document>
